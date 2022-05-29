@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        .input {
+            margin-top: 0px;
+        }
+        .rect {
+            height: 30px;
+            width: 150px;
+            border: 2px solid;
+            float: center;
+        }
+        .button {
+            background-color: #fff;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            border: 2px solid;
+            font-size: 16px;
+        }
+
+        .but1 {float: left; margin-left: 640px}
+        .but2 {float: right; margin-right: 640px}
+
+    </style>
+</head>
+<body onload="buttonIncreaseDecrease()">
+    <div align="center">
+        <h2>Hello &emsp;&emsp;&emsp; I'm &emsp;&emsp;&emsp; Viransh</h2>
+        <button class = "button but1" onclick="buttonIncreaseDecrease('-')">-</button>
+        <button class = "button but2" onclick="buttonIncreaseDecrease('+')">+</button>
+        <div class="rect">
+            <h2 class = "input"><span id="myInput"></span></h2>
+        </div>
+        <h2>Current Counter: <span id="myCounter"></span></h2>
+    </div>
+    <script>
+        let currentCounter = 1;
+        let input = 10;
+        function buttonIncreaseDecrease(plusMinus){
+            if(plusMinus == '+') {
+                currentCounter--;
+                input++;
+            }
+            else if(plusMinus == '-') {
+                currentCounter++;
+                input--;
+            }
+            document.getElementById("myInput").innerHTML = input;
+            document.getElementById("myCounter").innerHTML = currentCounter;
+        }
+    </script>
+</body>
+</html>
