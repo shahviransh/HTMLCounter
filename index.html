@@ -1,65 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Input Counter</title>
-    <style>
-        h2 {
-            text-align: center;
-        }
-        .input {
-            margin-top: 0px;
-        }
-        .rect {
-            height: 30px;
-            width: 150px;
-            border: 2px solid;
-            float: center;
-        }
-        .button {
-            background-color: #fff;
-            height: 30px;
-            width: 30px;
-            border-radius: 50%;
-            border: 2px solid;
-            font-size: 16px;
-        }
-        .minus {
-            float: left; 
-            margin-left: 640px
-        }
-        .plus {
-            float: right; 
-            margin-right: 640px
-        }
-
-    </style>
-</head>
-<body onload="buttonIncreaseDecrease()">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div align="center">
-        <div style="word-spacing: 5.2em;"> <h2>Hello I'm Viransh</h2> </div>
-        <button class = "button minus" onclick="buttonIncreaseDecrease('-')">-</button>
-        <button class = "button plus" onclick="buttonIncreaseDecrease('+')">+</button>
-        <div class="rect">
-            <h2 class = "input"><span id="myInput"></span></h2>
-        </div>
-        <h2>Current Counter: <span id="myCounter"></span></h2>
+      <div style="word-spacing: 30em"><h2>Hello I'm Viransh</h2></div>
+      <button class="button minus" onclick="buttonIncreaseDecrease('-')">
+        -
+      </button>
+      <button class="button plus" onclick="buttonIncreaseDecrease('+')">
+        +
+      </button>
+      <div class="rect">
+        <h2 class="input"><span id="myInput"></span></h2>
+      </div>
+      <h2>Current Counter: <span id="myCounter"></span></h2>
     </div>
     <script>
-        let currentCounter = 5;
-        let input = 0;
-        function buttonIncreaseDecrease(plusMinus){
-            if(plusMinus == '+') {
-                input += currentCounter;
-            }
-            else if(plusMinus == '-') {
-                input -= currentCounter;
-            }
-            document.getElementById("myInput").innerHTML = input;
-            document.getElementById("myCounter").innerHTML = currentCounter;
+      let currentCounter = 5;
+      let input = 0;
+      function buttonIncreaseDecrease(plusMinus) {
+        if (plusMinus == "+") {
+          input += currentCounter;
+        } else if (plusMinus == "-") {
+          input -= currentCounter;
         }
+      }
+      document.getElementById("myInput").innerHTML = input;
+      document.getElementById("myCounter").innerHTML = currentCounter;
     </script>
-</body>
+  </body>
 </html>
