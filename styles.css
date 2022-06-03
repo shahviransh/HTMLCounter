@@ -1,0 +1,28 @@
+h2 {
+  text-align: center;
+}
+.input {
+  margin-top: 0px;
+}
+.rect {
+  height: 30px;
+  width: 150px;
+  border: 2px solid;
+  float: center;
+}
+.button {
+  background-color: #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid;
+  font-size: 16px;
+}
+.minus {
+  float: left;
+  margin-left: 500px;
+}
+.plus {
+  float: right;
+  margin-right: 500px;
+}
