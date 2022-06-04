@@ -7,19 +7,21 @@
     <title>Input Counter</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div align="center">
-      <div style="word-spacing: 30em"><h2>Hello I'm Viransh</h2></div>
-      <button class="button minus" onclick="buttonIncreaseDecrease('-')">
-        -
-      </button>
-      <button class="button plus" onclick="buttonIncreaseDecrease('+')">
-        +
-      </button>
-      <div class="rect">
-        <h2 class="input"><span id="myInput"></span></h2>
+  <body onload="buttonIncreaseDecrease()">
+    <div class="wrapper vcenter">
+      <div class="box">
+        <div class="counter">
+          <h2 class="name">Hello I'm Viransh</h2>
+          <div class="btnCon">
+            <button class="button minus" onClick="buttonIncreaseDecrease('-')">-</button>
+            <div class="rect">
+              <span class="input"><span id="myInput"></span></span>
+            </div>
+            <button class="button plus" onClick="buttonIncreaseDecrease('+')">+</button>
+          </div>
+          <h2 class="counterNum">Current Counter: <span id="myCounter"></span></h2>
+        </div>
       </div>
-      <h2>Current Counter: <span id="myCounter"></span></h2>
     </div>
     <script>
       let currentCounter = 5;
@@ -30,9 +32,9 @@
         } else if (plusMinus == "-") {
           input -= currentCounter;
         }
+        document.getElementById("myInput").innerHTML = input;
+        document.getElementById("myCounter").innerHTML = currentCounter;
       }
-      document.getElementById("myInput").innerHTML = input;
-      document.getElementById("myCounter").innerHTML = currentCounter;
     </script>
   </body>
 </html>
