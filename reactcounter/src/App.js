@@ -31,12 +31,13 @@ export default function App() {
   const [input, setCounter] = useState(0);
   let count = 5;
 
-  const increase = () => {
-    setCounter(input + count);
-  };
-
-  const decrease = () => {
-    setCounter(input - count);
+  const set = (plusMinus) => {
+    if (plusMinus === '+'){
+      setCounter(input + count)
+    }
+    else {
+      setCounter(input - count)
+    }
   };
 
   return (
@@ -45,13 +46,13 @@ export default function App() {
         <div className="counter">
           <h2 className="name">Hello I'm Viransh</h2>
           <div className="btnCon">
-            <button className="button minus" onClick={decrease}>
+            <button className="button minus" onClick={()=>set('-')}>
               -
             </button>
             <div className="rect">
               <span className="input">{input}</span>
             </div>
-            <button className="button plus" onClick={increase}>
+            <button className="button plus" onClick={()=>set('+')}>
               +
             </button>
           </div>
